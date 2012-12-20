@@ -5,7 +5,6 @@ This code is based on: http://code.google.com/p/language-detection/
 <cfif structKeyExists( form, "formSend") and form.formSend eq "true">
     <cfset variables.source = form.txtContent />
     <cfoutput>source: #variables.source#<br/></cfoutput>
-    <cfoutput>wrong char found: #hasNonLatinChars( variables.source )#</cfoutput>
     
     <cfif len(form.txtContent)>
         <cfset detector = application.detectorFactory.create() />

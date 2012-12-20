@@ -3,10 +3,8 @@
     <cfset application.langDetectionLoaded = false />
 
     <cffunction name="initApplication" access="private">
-        <cfif application.langDetectionLoaded is false >
-            <cfset application.detectorFactory = createObject("Java", "com.cybozu.labs.langdetect.DetectorFactory" ) />
-            <cfset application.detectorFactory.loadProfile( expandPath("./profiles/") ) /><!--- caution: DetectorFactory uses a singleton, hand loadProfile will only be needed once! --->
-        </cfif>
+        <cfset application.detectorFactory = createObject("Java", "com.cybozu.labs.langdetect.DetectorFactory" ) />
+        <cfset application.detectorFactory.loadProfile( expandPath("./profiles/") ) /><!--- caution: DetectorFactory uses a singleton, hand loadProfile will only be needed once! --->
     </cffunction>
 
     <cffunction name="onApplicationStart">
