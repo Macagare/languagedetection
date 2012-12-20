@@ -2,14 +2,7 @@
 This code is based on: http://code.google.com/p/language-detection/
 --->
 
-<cffunction name="hasNonLatinChars" returntype="boolean">
-    <cfargument name="source" required="true" type="string" />
-    <cfreturn false />
-</cffunction>
-
 <cfif structKeyExists( form, "formSend") and form.formSend eq "true">
-
-
     <cfset variables.source = form.txtContent />
     <cfoutput>source: #variables.source#<br/></cfoutput>
     <cfoutput>wrong char found: #hasNonLatinChars( variables.source )#</cfoutput>
