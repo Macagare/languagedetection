@@ -1,0 +1,1 @@
+This is a small coldfusion project using the language detection library from http://code.google.com/p/language-detection/
